@@ -46,10 +46,10 @@ A: Certainly! It'll look something like this:
 Q: Now that you have the structured output, what's the final step?
 A: The aim is to highlight the body sentence with the highest percentage match to the summary sentence, completing the analysis.
 
-a) Summary Sentence: This is the [enter #] annual Development Safety Update Report (DSUR) by Bristol-Myers Squibb or its global affiliates (BMS; hereafter referred to as the Company) for [full generic name] (hereafter referred to as [abbreviated full generic name]).
+a) Summary Sentence: This is the [enter #] annual Development Safety Update Report (DSUR) by XXXX-Myers Squibb or its global affiliates (BMS; hereafter referred to as the Company) for [full generic name] (hereafter referred to as [abbreviated full generic name]).
 b) list of Body sentences:
 
-	- "This is an annual Development Safety Update Report (DSUR) prepared by Bristol Myers Squibb (BMS; hereafter referred to as the Company) for abatacept."
+	- "This is an annual Development Safety Update Report (DSUR) prepared by XXXX Myers Squibb (BMS; hereafter referred to as the Company) for abatacept."
 	- "This DSUR was prepared for submission to worldwide Health Authorities (HAS) based on the International Birth Date (IBD) of 23Dec2005, as defined in the International Council for Harmonisation (ICH) Guideline E2F."
 	- "The format of this document is based on that proposed by the referenced guideline."
 	- "Abatacept is co-developed in Japan by BMS and Ono Pharmaceutical Co., LTD."

@@ -1,50 +1,31 @@
-Understood. I'll incorporate that specificity into the Chain of Thoughts (CoT):
+Act as  Pharmacovigilance Data Analyst:
 
----
+Q: **Objective**: What are you trying to accomplish with the given data?
+A: I aim to determine which body sentence(s) best match the summary sentence in terms of percentage similarity.
 
-**Chain of Thoughts Prompt for Pharmacovigilance Data Analysis:**
+Q: **Initial Analysis**: What's the first thing to consider in the summary sentence?
+A: Identify and note any placeholders like [variable term]. These will be excluded from the matching process.
 
-Q: You are given a summary sentence and a list of body sentences. What's your primary task?
-A: My main goal is to identify the body sentence(s) that have the highest percentage match with the summary sentence and quantify the similarity for each sentence.
+Q: **Comparison Initiation**: How will you begin the matching process?
+A: Start by selecting the first body sentence from the provided list.
 
-Q: How do you start the process?
-A: Begin by examining the summary sentence, particularly noting any placeholders like [variable term] or [specific detail]. These placeholders should be excluded during the matching process.
+Q: **Matching Mechanism**: How do you compare a body sentence to the summary?
+A: Compare the body sentence with the summary sentence, omitting the placeholders, to calculate the percentage similarity.
 
-Q: After identifying placeholders, what's the next step?
-A: I will proceed to extract one sentence from the list of body sentences.
+Q: **Iterative Process**: After comparing one body sentence, what's next?
+A: Continue this methodology for each body sentence in the list, documenting the percentage similarity for each.
 
-Q: With the extracted body sentence in hand, what do you do next?
-A: I will compare the selected body sentence with the summary sentence, excluding the placeholders.
+Q: **Equally Matched Sentences**: If two body sentences have the same highest percentage similarity, what do you do?
+A: Retain both sentences, as they both qualify for the highest matching percentage.
 
-Q: What are you trying to determine from this comparison?
-A: I'm trying to determine the percentage match or similarity of the body sentence to the summary sentence.
+Q: **Review and Selection**: Post the comparison of all sentences, how do you finalize?
+A: Evaluate all the documented percentage matches to pinpoint the body sentence(s) with the highest similarity to the summary.
 
-Q: After evaluating one sentence, what do you do?
-A: I will continue this process for each sentence in the list of body sentences, always comparing with the summary sentence and calculating the percentage match.
+Q: **Output Formation**: How will you present your findings?
+A: Construct an output as a list, showcasing each body sentence with the topmost matching percentage.
 
-Q: What if two or more body sentences have the same highest percentage match with the summary sentence?
-A: In such a case, I will note down the percentage match for all of those sentences.
+Q: **Example Output**: Can you describe the output structure briefly?
+A: Yes. If the first body sentence matches the best, the output is ['sentence1']. If sentences one and two equally match the highest, the output is ['sentence1', 'sentence2'].
 
-Q: Once you've gone through all the body sentences, what's the next step?
-A: I'll organize my findings in a structured output format.
-
-Q: How should this output look?
-A: The output must be in JSON format, where each key represents the order of the body sentences, like "body_sentence1", "body_sentence2", and so on. The value for each key will be the calculated percentage match for that specific body sentence, represented as "xx%", "yy%", and so on.
-
-Q: Can you give a concise representation of this output?
-A: Certainly! The output will be:
-```json
-{
-	"body_sentence1": "xx%",
-	"body_sentence2": "yy%",
-	"body_sentence3": "zz%",
-	...
-}
-```
-
-Q: Now that you have the structured output, what's the final step?
-A: The aim is to use the output to determine and highlight the body sentence with the highest percentage match to the summary sentence, completing the analysis.
-
----
-
-Now, when provided with the body sentences and the summary sentence, a language model should process the information using the above CoT and always output the results in the specified JSON format.
+Q: **Conclusion**: Once you've formed the output, what's your concluding step?
+A: Provide the list of body sentence(s) that have the highest percentage similarity to the summary, effectively wrapping up the analysis.

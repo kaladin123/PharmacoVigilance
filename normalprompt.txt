@@ -1,0 +1,51 @@
+
+Act as Pharmacovigilance Data Analyst.
+
+Provide one summary sentence and a list of body sentences. Compute the matching score for each sentence in terms of percentage similarity.
+
+**Instructions**:
+
+**Step 1**: Extract one sentence from the body sentence list.
+
+**Step 2**: Compare the selected body sentence with the summary sentence.
+
+**Step 3**: Analyze and determine the percentage match of the body sentence with the summary sentence, considering the remaining sentences in the body sentences list.
+
+**Step 4**: If two or more sentences have an equal highest percentage match, provide the percentage for both.
+
+**Step 5**: Repeat the same steps for all the sentences.
+
+dentify the body sentence(s) that best match a given summary sentence and quantify the similarity as a percentage.
+
+The analysis will be performed on two inputs: 
+a) Summary Sentence: This is the [enter #] annual Development Safety Update Report (DSUR) by Bristol-Myers Squibb or its global affiliates (BMS; hereafter referred to as the Company) for [full generic name] (hereafter referred to as [abbreviated full generic name]).
+b) list of Body sentences:
+
+	- "This is an annual Development Safety Update Report (DSUR) prepared by Bristol Myers Squibb (BMS; hereafter referred to as the Company) for abatacept."
+	- "This DSUR was prepared for submission to worldwide Health Authorities (HAS) based on the International Birth Date (IBD) of 23Dec2005, as defined in the International Council for Harmonisation (ICH) Guideline E2F."
+	- "The format of this document is based on that proposed by the referenced guideline."
+	- "Abatacept is co-developed in Japan by BMS and Ono Pharmaceutical Co., LTD."
+	- "This DSUR summarizes safety data arising from the worldwide clinical development program and received by the Company from 23-Dec-2020 through 22-Dec-2021 that meets the inclusion criteria defined in ICH Guideline E2F.1."
+	- "Clinical investigation of abatacept has been underway since 15-Aug-1995."
+	- "Abatacept, a selective costimulation modulator, is a soluble fusion protein that consists of the extracellular domain of human cytotoxic T-lymphocyte (T-cell)-associated antigen 4 (CTLA4) linked to the modified Fc (hinge, CH2, and CH3 domains) portion of human immunoglobulin G1 (IgG1)."
+	- "By targeting the blockade of CD28 on the activated T-cell by binding to 87 complex (CD80/CD86) on the surface of the antigen presenting cell and preventing its interaction with C28 on the activated T-cell, abatacept inhibits the key costimulation pathway required for the full activation of the T-cell."
+
+The aim is to find the body sentence with the highest percentage match to the summary sentence.
+
+**Constraints**: 
+1. While matching the sentence, consider the order of words. Only a few words will change between the exact matching pair of summary sentence and the body sentence. 
+2. Placeholders are generic variables indicated by bracketed terms (e.g., [variable term], [specific detail], etc.) in the summary sentence and should be excluded during matching. 
+
+**Example**: 
+***Summary sentence***: This is the [time period] annual Development Safety Update Report (DSUR) by [company name] or its global affiliates ([abbreviation]; hereafter referred to as the Company) for [drug name].
+***Matching body sentence***: This is an annual Development Safety Update Report (DSUR) prepared by Bristol Myers Squibb (BMS; hereafter referred to as the Company) for abatacept. This DSUR was prepared for submission to worldwide Health Authorities (HAS) based on the International Birth Date (IBD) of 23Dec2005, as defined in the International Council for Harmonisation (ICH) Guideline E2F. The format of this document is based on that proposed by the referenced guideline.
+
+**Output Format**:
+```json
+{
+	"body_sentence1": "xx%",
+	"body_sentence2": "yy%",
+	"body_sentence3": "zz%",
+	...
+}
+```

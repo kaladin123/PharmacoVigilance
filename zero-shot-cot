@@ -1,0 +1,35 @@
+**Instructions for Analyzing Sentence Matching in Pharmacovigilance Data**
+
+When given a summary sentence and a list of body sentences, use the following thought process to determine which body sentence best matches the summary:
+
+1. **Begin with a Clear Understanding**:
+   - Recognize that you have two distinct inputs: 
+     - A `summary sentence` with specific placeholders.
+     - A `list of body sentences`.
+
+2. **Recognize the Importance of Placeholders**:
+   - Identify placeholders in the summary sentence. They are typically bracketed expressions like `[enter as applicable, ie, DIBD OR IBD]`.
+   - Understand that these placeholders and a few other words might be the only differences between the summary sentence and its matching body sentence.
+
+3. **Detailed Sentence Analysis**:
+   - For each body sentence, carefully compare it to the summary.
+   - Focus specifically on the overall sentence structure, matching patterns, and areas where placeholders exist.
+   - Calculate the extent to which each body sentence aligns with the summary, noting down the matching percentage.
+
+4. **Organize Your Findings**:
+   - Keep track of your results using a structured format. An ideal structure would be a JSON-like format where you log the percentage match for each body sentence. For instance:
+     ```json
+     {
+         "body_sentence1": "xx%",
+         "body_sentence2": "yy%",
+         ...
+     }
+     ```
+
+5. **Reflect and Conclude**:
+   - After analyzing all body sentences, review the recorded percentages.
+   - Determine which body sentence had the highest percentage of alignment with the summary.
+   - Recognize that this particular body sentence is the one you're looking for.
+
+6. **Report Your Results**:
+   - Finalize your findings by noting down the number corresponding to the best-matching body sentence (e.g., "1" if the first sentence is the best match).
